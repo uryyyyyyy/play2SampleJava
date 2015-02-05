@@ -11,6 +11,5 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache,
   javaWs,
-  "net.sf.opencsv" % "opencsv" % "2.3",
-  "org.projectlombok" % "lombok" % "1.16.0"
+  "org.projectlombok" % "lombok" % "1.14.8"
 )

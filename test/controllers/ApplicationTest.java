@@ -28,8 +28,7 @@ public class ApplicationTest {
 			@Override
 			public void run() {
 				ObjectMapper mapper = new ObjectMapper();
-				AccountDto account = new AccountDto();
-				account.id = "id";account.name = "nasme";
+				AccountDto account = new AccountDto("id", "nasme");
 				JsonNode node = mapper.convertValue(account, JsonNode.class);
 				Result result = callAction(
 						controllers.routes.ref.Application.sayHello(),
