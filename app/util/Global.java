@@ -8,10 +8,15 @@ import play.Logger;
 import play.libs.F.Promise;
 import play.mvc.Http.RequestHeader;
 import play.mvc.Result;
+import exception.SampleException;
 
 public class Global extends GlobalSettings{
 	public Promise<Result> onError(RequestHeader request, Throwable t) {
-		return Promise.<Result>pure(internalServerError("error"));
+		if(t instanceof SampleException){
+			return Promise.<Result>pure(internalServerError("normal error"));
+		}else{
+			return Promise.<Result>pure(internalServerError("unexpected error"));
+		}
 	}
 
 	public Promise<Result> onHandlerNotFound(RequestHeader request) {

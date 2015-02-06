@@ -10,8 +10,11 @@ import daos.cache.CacheFactory;
 public class CacheSample extends Controller {
 
 	public static Result index() {
-		Optional<Account> a = CacheFactory.get().<Account>get("ss");
-		Account a_ = a.orElse(new Account("id1", "name1"));
+		Account acc = new Account("id1", "name1");
+		CacheFactory.get().<Account>set("acc", acc);
+		
+		Optional<Account> a = CacheFactory.get().<Account>get("acc");
+		Account a_ = a.orElse(new Account("id1", "default"));
 		return ok(a_.name + " done");
 	}
 

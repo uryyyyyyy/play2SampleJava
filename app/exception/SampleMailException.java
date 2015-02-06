@@ -1,9 +1,7 @@
 package exception;
 
-
-
 @SuppressWarnings("serial")
-public class SampleMailException extends RuntimeException {
+public class SampleMailException extends SampleException {
 
 	public SampleMailException(Exception e) {
 		super(e);

@@ -8,4 +8,12 @@ public class SampleException extends RuntimeException {
 		super(e);
 	}
 
+	public SampleException() {
+		super();
+	}
+
+	public SampleException(String s) {
+		super(s);
+	}
+
 }

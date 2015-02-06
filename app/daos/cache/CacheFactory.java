@@ -15,7 +15,6 @@ public class CacheFactory {
 		return s;
 	}
 
-	//TODO initialize時にチェックする方が望ましい。
 	public static Cache init(){
 		String s = ConfigUtil.getConfigString("sample.cache");
 		if(s.equals("memory")){

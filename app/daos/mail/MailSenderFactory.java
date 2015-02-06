@@ -16,15 +16,15 @@ public class MailSenderFactory {
 	}
 
 	private static MailSender init(){
-		String mail = ConfigUtil.getConfigString("sample.mail");
-		if(mail.equals("gmail")){
+		String s = ConfigUtil.getConfigString("sample.mail");
+		if(s.equals("gmail")){
 			Logger.debug("GMailSender");
 			return new GMailSender();
-		}else if(mail.equals("smtp")){
+		}else if(s.equals("smtp")){
 			Logger.debug("SMTPMailSender");
 			return new SMTPMailSender();
 		}else{
-			Logger.error("not found: %s", mail);
+			Logger.error("not found: %s", s);
 			throw new SampleMailException("not found");
 		}
 	}
