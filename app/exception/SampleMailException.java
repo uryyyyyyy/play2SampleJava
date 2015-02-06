@@ -9,4 +9,8 @@ public class SampleMailException extends RuntimeException {
 		super(e);
 	}
 
+	public SampleMailException(String s) {
+		super(s);
+	}
+
 }
