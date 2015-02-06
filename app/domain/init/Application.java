@@ -1,4 +1,5 @@
-package controllers;
+package domain.init;
+
 
 import java.io.IOException;
 
