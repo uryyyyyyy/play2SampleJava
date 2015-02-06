@@ -9,7 +9,6 @@ scalaVersion := "2.11.1"
 libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
-  cache,
   javaWs,
   "org.projectlombok" % "lombok" % "1.14.8",
   "org.apache.commons" % "commons-email" % "1.3.3",

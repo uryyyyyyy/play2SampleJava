@@ -6,5 +6,7 @@ GET     /mail                           domain.mail.MailSample.index()
 
 GET     /cache                           domain.cache.CacheSample.index()
 
+GET     /db                           domain.database.DatabaseSample.index()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
