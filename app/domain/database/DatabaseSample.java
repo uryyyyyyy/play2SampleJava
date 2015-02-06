@@ -4,8 +4,8 @@ import java.util.List;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import daos.model1.Model1Factory;
-import daos.model1.impl.mysql.Model1Entity;
+import daos.dao.model1.Model1Factory;
+import daos.entity.Model1Entity;
 
 public class DatabaseSample extends Controller {
 

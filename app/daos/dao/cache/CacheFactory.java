@@ -1,10 +1,10 @@
-package daos.cache;
+package daos.dao.cache;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.cache.impl.PlayCache;
-import daos.cache.impl.RedisCache;
-import exception.SampleMailException;
+import daos.dao.cache.impl.PlayCache;
+import daos.dao.cache.impl.RedisCache;
+import exceptions.SampleMailException;
 
 
 public class CacheFactory {

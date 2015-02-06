@@ -1,9 +1,9 @@
-package daos.model1.impl.redis;
+package daos.dao.model1.impl;
 
 import java.util.List;
 
-import daos.model1.Model1Dao;
-import daos.model1.impl.mysql.Model1Entity;
+import daos.dao.model1.Model1Dao;
+import daos.entity.Model1Entity;
 
 public class Model1DaoRedis implements Model1Dao {
 

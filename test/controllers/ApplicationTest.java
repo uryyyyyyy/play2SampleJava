@@ -13,7 +13,7 @@ import play.libs.ws.WSResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import dto.AccountDto;
+import dtos.AccountDto;
 
 public class ApplicationTest {
 

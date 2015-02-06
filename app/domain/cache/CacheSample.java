@@ -5,7 +5,7 @@ import java.util.Optional;
 import play.mvc.Controller;
 import play.mvc.Result;
 import vos.Account;
-import daos.cache.CacheFactory;
+import daos.dao.cache.CacheFactory;
 
 public class CacheSample extends Controller {
 

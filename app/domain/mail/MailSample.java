@@ -2,8 +2,8 @@ package domain.mail;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import daos.mail.MailSenderFactory;
-import exception.SampleMailException;
+import daos.dao.mail.MailSenderFactory;
+import exceptions.SampleMailException;
 
 public class MailSample extends Controller {
 

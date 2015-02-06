@@ -1,8 +1,9 @@
-package daos.model1.impl.mysql;
+package daos.dao.model1.impl;
 
 import java.util.List;
 
-import daos.model1.Model1Dao;
+import daos.dao.model1.Model1Dao;
+import daos.entity.Model1Entity;
 
 public class Model1DaoMysql implements Model1Dao {
 

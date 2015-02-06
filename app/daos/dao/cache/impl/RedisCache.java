@@ -1,10 +1,10 @@
-package daos.cache.impl;
+package daos.dao.cache.impl;
 
 import java.util.Optional;
 
 import redis.clients.jedis.Jedis;
 import util.converter.Json;
-import daos.cache.Cache;
+import daos.dao.cache.Cache;
 
 public class RedisCache implements Cache {
 

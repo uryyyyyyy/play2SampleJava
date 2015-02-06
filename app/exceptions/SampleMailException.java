@@ -1,4 +1,4 @@
-package exception;
+package exceptions;
 
 @SuppressWarnings("serial")
 public class SampleMailException extends SampleException {

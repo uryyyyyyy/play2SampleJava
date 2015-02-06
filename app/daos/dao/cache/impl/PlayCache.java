@@ -1,9 +1,9 @@
-package daos.cache.impl;
+package daos.dao.cache.impl;
 
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-import daos.cache.Cache;
+import daos.dao.cache.Cache;
 
 public class PlayCache implements Cache {
 	

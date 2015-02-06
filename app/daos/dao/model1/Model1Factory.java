@@ -1,10 +1,10 @@
-package daos.model1;
+package daos.dao.model1;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.model1.impl.mysql.Model1DaoMysql;
-import daos.model1.impl.redis.Model1DaoRedis;
-import exception.SampleMailException;
+import daos.dao.model1.impl.Model1DaoMysql;
+import daos.dao.model1.impl.Model1DaoRedis;
+import exceptions.SampleMailException;
 
 
 public class Model1Factory {

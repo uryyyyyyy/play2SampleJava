@@ -8,7 +8,7 @@ import play.Logger;
 import play.libs.F.Promise;
 import play.mvc.Http.RequestHeader;
 import play.mvc.Result;
-import exception.SampleException;
+import exceptions.SampleException;
 
 public class Global extends GlobalSettings{
 	public Promise<Result> onError(RequestHeader request, Throwable t) {

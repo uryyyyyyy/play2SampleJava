@@ -1,4 +1,4 @@
-package daos.model1.impl.mysql;
+package daos.entity;
 
 import java.util.Date;
 
