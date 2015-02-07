@@ -14,5 +14,12 @@ GET     /file/save/:id                           domain.file.FileSample.save(id:
 GET     /file/find/:id                           domain.file.FileSample.find(id: String)
 GET     /file/list                           domain.file.FileSample.list()
 
+
+POST     /api/file/upload                           domain.file.FileApiSample.upload()
+
+GET     /api/db/get                           domain.database.AjaxApiSample.get()
+POST     /api/db/post                           domain.database.AjaxApiSample.post()
+
+
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /public/*file               controllers.Assets.at(path="/public", file)

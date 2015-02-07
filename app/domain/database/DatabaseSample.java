@@ -5,7 +5,6 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.List;
 
-import play.db.ebean.Transactional;
 import play.mvc.Controller;
 import play.mvc.Result;
 import vos.Model1;
@@ -14,7 +13,6 @@ import daos.model1.write.Model1WFactory;
 
 public class DatabaseSample extends Controller {
 
-	@Transactional
 	public static Result write(String id) {
 		Model1 vo = new Model1(id,
 				100,

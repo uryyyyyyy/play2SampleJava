@@ -8,9 +8,11 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccountDto {
+public class Model1Dto {
 
 	public String id;
-	public String name;
+	public long value;
+	public boolean flag;
+	public String dueDate;
 
 }

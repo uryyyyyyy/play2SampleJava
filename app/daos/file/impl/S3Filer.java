@@ -49,25 +49,25 @@ public class S3Filer implements Filer {
 	public File find(String id) throws SampleFileException {
 		try {
 			S3Object obj = s3Client.getObject(new GetObjectRequest(s3BucketName, id));
-			InputStream objectData = obj.getObjectContent();
-			File f = toFile(objectData, id);
-			objectData.close();
+			File f = toFile(obj, id);
+			obj.close();
 			return f;
 		} catch (IOException | AmazonClientException e) {
 			throw new SampleFileException(e);
 		}
 	}
 
-	private static File toFile(InputStream input, String id) throws IOException{
+	private static File toFile(S3Object obj, String id) throws IOException{
 		File f = new File("tmp/"+id);
+		InputStream objStream = obj.getObjectContent();
 		@SuppressWarnings("resource")
 		OutputStream out = new FileOutputStream(f);
-		byte[] buffer = new byte[10240]; // Adjust if you want
+		byte[] buffer = new byte[1024]; // Adjust if you want
 		int bytesRead;
-		while ((bytesRead = input.read(buffer)) != -1){
-			Logger.info("downloading 10MB/log");
+		while ((bytesRead = objStream.read(buffer)) != -1){
 			out.write(buffer, 0, bytesRead);
 		}
+		objStream.close();
 		return f;
 	}
 

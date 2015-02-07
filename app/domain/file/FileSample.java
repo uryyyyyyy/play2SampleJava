@@ -25,7 +25,7 @@ public class FileSample extends Controller {
 	}
 
 	public static Result save(String id) {
-		File file = new File("tmp/.gitkeep");
+		File file = new File("tmp/image.png");
 		FilerFactory.get().save(id, file);
 		return ok("file saved!");
 	}

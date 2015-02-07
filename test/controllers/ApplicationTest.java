@@ -13,7 +13,7 @@ import play.libs.ws.WSResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import dtos.AccountDto;
+import dtos.Model1Dto;
 
 public class ApplicationTest {
 
@@ -32,7 +32,7 @@ public class ApplicationTest {
 		running(testServer(3333), new Runnable() {
 			public void run() {
 				ObjectMapper mapper = new ObjectMapper();
-				AccountDto account = new AccountDto("id", "nasme");
+				Model1Dto account = new Model1Dto("id", 100, true, "dd");
 				JsonNode node = mapper.convertValue(account, JsonNode.class);
 				WSResponse res = WS.url("http://localhost:3333").post(node).get(1000);
 				assertThat(res.getBody()).isEqualTo("Hello nasme");

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
-import dtos.AccountDto;
+import dtos.Model1Dto;
 
 public class Application extends Controller {
 
@@ -22,8 +22,8 @@ public class Application extends Controller {
 	public static Result sayHello() throws JsonParseException, JsonMappingException, IOException {
 		JsonNode json = request().body().asJson();
 		Logger.info("ssss");
-		AccountDto account = JsonConverter.toPojo(json);
-		return ok("Hello " + account.name);
+		Model1Dto account = JsonConverter.toPojo(json);
+		return ok("Hello " + account.id);
 	}
 	
 	public static Result index() throws JsonParseException, JsonMappingException, IOException {
