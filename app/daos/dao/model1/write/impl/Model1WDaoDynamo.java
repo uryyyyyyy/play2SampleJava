@@ -33,15 +33,19 @@ public class Model1WDaoDynamo implements Model1WDao {
 
 	@Override
 	public void delete(String id) throws SamplePersistException {
-		// TODO Auto-generated method stub
-
+		try {
+			Table table = DynamoUtil.getTable("sample1");
+			table.deleteItem("id", id);
+			Logger.debug("delete dynamoDB id: " + id);
+		} catch (AmazonClientException e) {
+			Logger.error("dynamoDB delete error");
+			throw new SamplePersistException(e);
+		}
 	}
 
 	@Override
 	public void update(Model1 vo) throws SamplePersistException {
-		// TODO Auto-generated method stub
-
+		create(vo);
 	}
-
 
 }
