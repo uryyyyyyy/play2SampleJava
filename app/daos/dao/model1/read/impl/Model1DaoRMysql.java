@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import util.converter.DateConverter;
 import vos.Model1;
 import daos.dao.model1.read.Model1RDao;
-import daos.entity.Model1Entity;
+import daos.utils.rdbentity.Model1Entity;
 import exceptions.SamplePersistException;
 
 public class Model1DaoRMysql implements Model1RDao {
@@ -20,7 +20,11 @@ public class Model1DaoRMysql implements Model1RDao {
 	@Override
 	public Model1 findById(String id) throws SamplePersistException {
 		Model1Entity e = Model1Entity.find.byId(id);
-		return toVo(e);
+		if(e != null){
+			return toVo(e);
+		}else{
+			throw new SamplePersistException("cannot get id: " + id);
+		}
 	}
 
 	private Model1 toVo(Model1Entity e) {

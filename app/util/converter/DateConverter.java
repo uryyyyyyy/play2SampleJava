@@ -2,6 +2,10 @@ package util.converter;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
+import play.Logger;
+import exceptions.SampleException;
 
 public class DateConverter{
 
@@ -13,7 +17,12 @@ public class DateConverter{
 	}
 
 	public static ZonedDateTime toZonedDateTime(String dateStr){
-		return ZonedDateTime.parse(dateStr, withZone);
+		try{
+			return ZonedDateTime.parse(dateStr, withZone);
+		}catch(DateTimeParseException e){
+			Logger.error("ZonedDateTime parse error: "+dateStr);
+			throw new SampleException(e);
+		}
 	}
 
 }

@@ -8,7 +8,6 @@ import java.util.stream.StreamSupport;
 
 import play.Logger;
 import util.converter.DateConverter;
-import util.daoUtil.DynamoUtil;
 import vos.Model1;
 
 import com.amazonaws.AmazonClientException;
@@ -19,6 +18,7 @@ import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 
 import daos.dao.model1.read.Model1RDao;
+import daos.utils.DynamoUtil;
 import exceptions.SamplePersistException;
 
 public class Model1DaoRDynamo implements Model1RDao {
@@ -42,7 +42,7 @@ public class Model1DaoRDynamo implements Model1RDao {
 			Table table = DynamoUtil.getTable("sample1");
 
 			QuerySpec querySpec = new QuerySpec()
-			.withHashKey("id", "jjj");
+			.withHashKey("id", "jjj");//TODO
 			ItemCollection<QueryOutcome> items = table.query(querySpec);
 			Logger.debug("get dynamoDB : all");
 			return toVo(items);

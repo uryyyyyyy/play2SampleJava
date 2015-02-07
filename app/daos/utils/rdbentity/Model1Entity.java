@@ -1,7 +1,8 @@
-package daos.entity;
+package daos.utils.rdbentity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.ToString;
@@ -12,6 +13,7 @@ import play.db.ebean.Model;
 @Entity
 @ToString
 @AllArgsConstructor
+@Table(name="model1s")
 public class Model1Entity extends Model {
 
 	@Id

@@ -6,7 +6,7 @@ import play.Logger;
 import util.converter.DateConverter;
 import vos.Model1;
 import daos.dao.model1.write.Model1WDao;
-import daos.entity.Model1Entity;
+import daos.utils.rdbentity.Model1Entity;
 import exceptions.SamplePersistException;
 
 public class Model1WDaoMysql implements Model1WDao {
@@ -19,7 +19,7 @@ public class Model1WDaoMysql implements Model1WDao {
 			Logger.debug("create id: %s start", e.id);
 			e.save();
 		}catch(PersistenceException e){
-			Logger.error("cannot saved");
+			Logger.error("cannot saved. id: "+vo.id);
 			throw new SamplePersistException(e);
 		}
 	}
