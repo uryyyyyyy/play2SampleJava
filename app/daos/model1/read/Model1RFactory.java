@@ -1,9 +1,9 @@
-package daos.dao.model1.read;
+package daos.model1.read;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.dao.model1.read.impl.Model1DaoRDynamo;
-import daos.dao.model1.read.impl.Model1DaoRMysql;
+import daos.model1.read.impl.Model1DaoRDynamo;
+import daos.model1.read.impl.Model1DaoRMysql;
 import exceptions.SampleMailException;
 
 

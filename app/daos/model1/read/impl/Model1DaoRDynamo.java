@@ -1,4 +1,4 @@
-package daos.dao.model1.read.impl;
+package daos.model1.read.impl;
 
 import java.util.List;
 import java.util.Spliterator;
@@ -17,7 +17,7 @@ import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 
-import daos.dao.model1.read.Model1RDao;
+import daos.model1.read.Model1RDao;
 import daos.utils.DynamoUtil;
 import exceptions.SamplePersistException;
 

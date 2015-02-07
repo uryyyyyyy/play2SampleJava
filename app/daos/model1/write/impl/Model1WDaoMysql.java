@@ -1,12 +1,12 @@
-package daos.dao.model1.write.impl;
+package daos.model1.write.impl;
 
 import javax.persistence.PersistenceException;
 
 import play.Logger;
 import util.converter.DateConverter;
 import vos.Model1;
-import daos.dao.model1.write.Model1WDao;
-import daos.utils.rdbentity.Model1Entity;
+import daos.model1.utils.entity.Model1Entity;
+import daos.model1.write.Model1WDao;
 import exceptions.SamplePersistException;
 
 public class Model1WDaoMysql implements Model1WDao {

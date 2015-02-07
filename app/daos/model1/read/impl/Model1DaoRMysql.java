@@ -1,12 +1,12 @@
-package daos.dao.model1.read.impl;
+package daos.model1.read.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import util.converter.DateConverter;
 import vos.Model1;
-import daos.dao.model1.read.Model1RDao;
-import daos.utils.rdbentity.Model1Entity;
+import daos.model1.read.Model1RDao;
+import daos.model1.utils.entity.Model1Entity;
 import exceptions.SamplePersistException;
 
 public class Model1DaoRMysql implements Model1RDao {

@@ -1,4 +1,4 @@
-package daos.dao.mail;
+package daos.mail;
 
 
 public interface MailSender {

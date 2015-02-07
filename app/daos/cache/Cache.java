@@ -1,4 +1,4 @@
-package daos.dao.cache;
+package daos.cache;
 
 import java.util.Optional;
 

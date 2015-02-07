@@ -1,4 +1,4 @@
-package daos.dao.model1.write;
+package daos.model1.write;
 
 import vos.Model1;
 import exceptions.SamplePersistException;

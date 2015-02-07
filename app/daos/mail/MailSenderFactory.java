@@ -1,9 +1,9 @@
-package daos.dao.mail;
+package daos.mail;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.dao.mail.impl.GMailSender;
-import daos.dao.mail.impl.SMTPMailSender;
+import daos.mail.impl.GMailSender;
+import daos.mail.impl.SMTPMailSender;
 import exceptions.SampleMailException;
 
 

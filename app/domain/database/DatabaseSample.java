@@ -9,8 +9,8 @@ import play.db.ebean.Transactional;
 import play.mvc.Controller;
 import play.mvc.Result;
 import vos.Model1;
-import daos.dao.model1.read.Model1RFactory;
-import daos.dao.model1.write.Model1WFactory;
+import daos.model1.read.Model1RFactory;
+import daos.model1.write.Model1WFactory;
 
 public class DatabaseSample extends Controller {
 

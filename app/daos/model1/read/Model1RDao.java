@@ -1,4 +1,4 @@
-package daos.dao.model1.read;
+package daos.model1.read;
 
 import java.util.List;
 

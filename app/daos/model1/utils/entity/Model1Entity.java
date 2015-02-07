@@ -1,4 +1,4 @@
-package daos.utils.rdbentity;
+package daos.model1.utils.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -29,6 +29,6 @@ public class Model1Entity extends Model {
 	public String dueDate;
 
 	public static Finder<String,Model1Entity> find = 
-			new Finder<String,Model1Entity>(String.class, Model1Entity.class); 
+			new Finder<String,Model1Entity>("model1", String.class, Model1Entity.class); 
 
 }

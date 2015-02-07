@@ -1,9 +1,9 @@
-package daos.dao.model1.write;
+package daos.model1.write;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.dao.model1.write.impl.Model1WDaoDynamo;
-import daos.dao.model1.write.impl.Model1WDaoMysql;
+import daos.model1.write.impl.Model1WDaoDynamo;
+import daos.model1.write.impl.Model1WDaoMysql;
 import exceptions.SampleMailException;
 
 

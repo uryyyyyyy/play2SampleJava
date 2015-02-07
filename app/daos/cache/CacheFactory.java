@@ -1,9 +1,9 @@
-package daos.dao.cache;
+package daos.cache;
 
 import play.Logger;
 import util.ConfigUtil;
-import daos.dao.cache.impl.PlayCache;
-import daos.dao.cache.impl.RedisCache;
+import daos.cache.impl.PlayCache;
+import daos.cache.impl.RedisCache;
 import exceptions.SampleMailException;
 
 

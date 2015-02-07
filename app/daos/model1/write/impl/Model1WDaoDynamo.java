@@ -1,4 +1,4 @@
-package daos.dao.model1.write.impl;
+package daos.model1.write.impl;
 
 import play.Logger;
 import util.converter.DateConverter;
@@ -8,7 +8,7 @@ import com.amazonaws.AmazonClientException;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.Table;
 
-import daos.dao.model1.write.Model1WDao;
+import daos.model1.write.Model1WDao;
 import daos.utils.DynamoUtil;
 import exceptions.SamplePersistException;
 
