@@ -9,12 +9,19 @@ import lombok.ToString;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
+import com.avaje.ebean.Ebean;
+
 @SuppressWarnings("serial")
 @Entity
 @ToString
 @AllArgsConstructor
 @Table(name="model1s")
 public class Model1Entity extends Model {
+
+	@Override
+	public void save() {
+		Ebean.getServer("model1").save(this);
+	}
 
 	@Id
 	public String id;

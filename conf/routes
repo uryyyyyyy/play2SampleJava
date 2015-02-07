@@ -10,5 +10,9 @@ GET     /db/write/:id                           domain.database.DatabaseSample.w
 GET     /db/read/:id                           domain.database.DatabaseSample.read(id: String)
 GET     /db/readAll                           domain.database.DatabaseSample.readAll()
 
+GET     /file/save/:id                           domain.file.FileSample.save(id: String)
+GET     /file/find/:id                           domain.file.FileSample.find(id: String)
+GET     /file/list                           domain.file.FileSample.list()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
