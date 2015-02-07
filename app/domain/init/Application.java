@@ -7,7 +7,7 @@ import play.Logger;
 import play.mvc.BodyParser;
 import play.mvc.Controller;
 import play.mvc.Result;
-import util.converter.Json;
+import util.converter.JsonConverter;
 import vos.Account;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -22,13 +22,13 @@ public class Application extends Controller {
 	public static Result sayHello() throws JsonParseException, JsonMappingException, IOException {
 		JsonNode json = request().body().asJson();
 		Logger.info("ssss");
-		AccountDto account = Json.toPojo(json);
+		AccountDto account = JsonConverter.toPojo(json);
 		return ok("Hello " + account.name);
 	}
 	
 	public static Result index() throws JsonParseException, JsonMappingException, IOException {
 		Account account = new Account("id", "name");
-		JsonNode node = Json.toJsonNode(account);
+		JsonNode node = JsonConverter.toJsonNode(account);
 		
 		return ok(node);
 	}

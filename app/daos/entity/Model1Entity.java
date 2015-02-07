@@ -1,32 +1,32 @@
 package daos.entity;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import play.data.format.Formats;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
 @SuppressWarnings("serial")
-@Entity 
+@Entity
+@ToString
+@AllArgsConstructor
 public class Model1Entity extends Model {
 
 	@Id
-	@Constraints.Min(10)
-	public Long id;
+	public String id;
 
 	@Constraints.Required
-	public String name;
+	public long value;
 
-	public boolean done;
+	@Constraints.Required
+	public boolean flag;
 
-	@Formats.DateTime(pattern="dd/MM/yyyy")
-	public Date dueDate = new Date();
+	@Constraints.Required
+	public String dueDate;
 
-	public static Finder<Long,Model1Entity> find = new Finder<Long,Model1Entity>(
-			Long.class, Model1Entity.class
-			); 
+	public static Finder<String,Model1Entity> find = 
+			new Finder<String,Model1Entity>(String.class, Model1Entity.class); 
 
 }

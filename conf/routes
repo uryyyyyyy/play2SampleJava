@@ -6,7 +6,9 @@ GET     /mail                           domain.mail.MailSample.index()
 
 GET     /cache                           domain.cache.CacheSample.index()
 
-GET     /db                           domain.database.DatabaseSample.index()
+GET     /db/write/:id                           domain.database.DatabaseSample.write(id: String)
+GET     /db/read/:id                           domain.database.DatabaseSample.read(id: String)
+GET     /db/readAll                           domain.database.DatabaseSample.readAll()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

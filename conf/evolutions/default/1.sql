@@ -4,10 +4,10 @@
 # --- !Ups
 
 create table model1entity (
-  id                        bigint not null,
-  name                      varchar(255),
-  done                      boolean,
-  due_date                  timestamp,
+  id                        varchar(255) not null,
+  value                     bigint,
+  flag                      boolean,
+  due_date                  varchar(255),
   constraint pk_model1entity primary key (id))
 ;
 

@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import exceptions.SampleJsonException;
 
-public class Json{
+public class JsonConverter{
 
 	private static ObjectMapper mapper = new ObjectMapper();
 
