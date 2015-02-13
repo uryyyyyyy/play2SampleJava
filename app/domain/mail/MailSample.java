@@ -1,15 +1,15 @@
 package domain.mail;
 
+import daos.DaoFactory;
+import exceptions.SampleMailException;
 import play.mvc.Controller;
 import play.mvc.Result;
-import daos.mail.MailSenderFactory;
-import exceptions.SampleMailException;
 
 public class MailSample extends Controller {
 
 	public static Result index() {
 		try {
-			MailSenderFactory.get().send();
+			DaoFactory.mailSender.send();
 			return ok("mail send");
 		} catch (SampleMailException e) {
 			return ok("mail fail");

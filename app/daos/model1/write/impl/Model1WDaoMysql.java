@@ -1,7 +1,7 @@
 package daos.model1.write.impl;
 
+import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
-import daos.model1.utils.entity.DataSourceManager;
 import daos.model1.utils.entity.Model1Entity;
 import daos.model1.write.Model1WDao;
 import exceptions.SamplePersistException;
@@ -15,7 +15,7 @@ public class Model1WDaoMysql implements Model1WDao {
 
 	@Override
 	public void create(Model1 vo) throws SamplePersistException {
-		EbeanServer s = DataSourceManager.getDataSource();
+		EbeanServer s = Ebean.getServer("mysql");
 		s.beginTransaction();
 		try{
 			Model1Entity e = toEntity(vo);
@@ -34,14 +34,14 @@ public class Model1WDaoMysql implements Model1WDao {
 
 	@Override
 	public void delete(String id) throws SamplePersistException {
-		EbeanServer s = DataSourceManager.getDataSource();
+		EbeanServer s = Ebean.getServer("mysql");
 		Model1Entity e = s.find(Model1Entity.class, id);
 		s.delete(e);
 	}
 
 	@Override
 	public void update(Model1 vo) throws SamplePersistException {
-		EbeanServer s = DataSourceManager.getDataSource();
+		EbeanServer s = Ebean.getServer("mysql");
 		Model1Entity e = toEntity(vo);
 		s.update(e);
 	}

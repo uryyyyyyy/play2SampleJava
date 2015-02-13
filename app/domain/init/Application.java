@@ -26,7 +26,6 @@ public class Application extends Controller {
 	public static Result index() {
 		Account account = new Account("id", "name");
 		JsonNode node = JsonConverter.toJsonNode(account);
-
 		return ok(node);
 	}
 

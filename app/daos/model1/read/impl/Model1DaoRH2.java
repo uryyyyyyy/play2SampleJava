@@ -11,11 +11,11 @@ import vos.Model1;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Model1DaoRMysql implements Model1RDao {
+public class Model1DaoRH2 implements Model1RDao {
 
 	@Override
 	public List<Model1> all() throws SamplePersistException{
-		EbeanServer s = Ebean.getServer("mysql");
+		EbeanServer s = Ebean.getServer("h2");
 		return s.find(Model1Entity.class).findList().stream()
 				.map(e -> toVo(e))
 				.collect(Collectors.toList());
@@ -23,7 +23,7 @@ public class Model1DaoRMysql implements Model1RDao {
 
 	@Override
 	public Model1 findById(String id) throws SamplePersistException {
-		EbeanServer s = Ebean.getServer("mysql");
+		EbeanServer s = Ebean.getServer("h2");
 		Model1Entity e = s.find(Model1Entity.class, id);
 		if(e != null){
 			return toVo(e);

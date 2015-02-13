@@ -1,18 +1,18 @@
 package domain.file;
 
-import java.io.File;
-import java.util.List;
-
+import daos.DaoFactory;
+import exceptions.SampleException;
 import play.mvc.Controller;
 import play.mvc.Result;
-import daos.file.FilerFactory;
-import exceptions.SampleException;
+
+import java.io.File;
+import java.util.List;
 
 public class FileSample extends Controller {
 
 	public static Result find(String id) {
 		try{
-			File f = FilerFactory.get().find(id);
+			File f = DaoFactory.filer.find(id);
 			return ok(f);
 		}catch(SampleException e){
 			return ok("cannot found: "+id);
@@ -20,13 +20,13 @@ public class FileSample extends Controller {
 	}
 
 	public static Result list() {
-		List<String> files = FilerFactory.get().list();
+		List<String> files = DaoFactory.filer.list();
 		return ok(files.toString());
 	}
 
 	public static Result save(String id) {
 		File file = new File("tmp/image.png");
-		FilerFactory.get().save(id, file);
+		DaoFactory.filer.save(id, file);
 		return ok("file saved!");
 	}
 

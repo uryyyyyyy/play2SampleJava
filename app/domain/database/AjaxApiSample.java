@@ -1,8 +1,7 @@
 package domain.database;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import daos.model1.read.Model1RFactory;
-import daos.model1.write.Model1WFactory;
+import daos.DaoFactory;
 import dtos.Model1Dto;
 import play.Logger;
 import play.mvc.Controller;
@@ -28,14 +27,14 @@ public class AjaxApiSample extends Controller {
 				dto.flag,
 				DateConverter.toZonedDateTime(dto.dueDate)
 		);
-		Model1WFactory.get().create(vo);
+		DaoFactory.model1WDao.create(vo);
 
 		response().setHeader(HeaderNames.ACCESS_CONTROL_ALLOW_ORIGIN, " *");
 		return ok("posted");
 	}
 
 	public static Result get() {
-		Model1 vo = Model1RFactory.get().findById("idSample");
+		Model1 vo = DaoFactory.model1RDao.findById("idSample");
 		Model1Dto dto = new Model1Dto(
 				vo.id, vo.value, vo.flag, DateConverter.toStr(vo.dueDate));
 		return ok(JsonConverter.toJson(dto));

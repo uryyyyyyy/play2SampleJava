@@ -3,7 +3,6 @@ GET     /                           domain.init.Application.index()
 POST     /                           domain.init.Application.sayHello()
 
 GET     /mail                           domain.mail.MailSample.index()
-
 GET     /cache                           domain.cache.CacheSample.index()
 
 GET     /db/write/:id                           domain.database.DatabaseSample.write(id: String)
@@ -19,6 +18,9 @@ POST     /api/file/upload                           domain.file.FileApiSample.up
 
 GET     /api/db/get                           domain.database.AjaxApiSample.get()
 POST     /api/db/post                           domain.database.AjaxApiSample.post()
+
+GET     /session/create                           domain.session.SessionSample.createSession()
+GET     /session/clear                           domain.session.SessionSample.clearSession()
 
 
 # Map static resources from the /public folder to the /assets URL path
