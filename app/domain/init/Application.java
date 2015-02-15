@@ -26,6 +26,9 @@ public class Application extends Controller {
 	public static Result index() {
 		Account account = new Account("id", "name");
 		JsonNode node = JsonConverter.toJsonNode(account);
+		ScalaSample ss = new ScalaSample(3, "title");
+		Logger.info(ss.title());
+		ScalaSample.func();
 		return ok(node);
 	}
 
